@@ -1,0 +1,355 @@
+{
+	"id": "01ecfe31-a31e-401f-8395-cb5ccda18e2e",
+	"name": "КиноПоиск",
+	"timestamp": "2025-11-14T15:26:26.404Z",
+	"collection_id": "47724709-d0938b9c-b35d-48d6-a1db-cf046be46f4c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 18,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-11-14T15:26:22.594Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "dc53ca0c-46e9-47a2-8922-198de4df0e93",
+			"name": "поиск случайного фильма",
+			"url": "https://api.poiskkino.dev/v1.4/movie/random",
+			"time": 600,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ содержит информацию о случайном фильме": true,
+				"Сохраняем ID случайного фильма": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит информацию о случайном фильме": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Сохраняем ID случайного фильма": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				600
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ содержит информацию о случайном фильме": true,
+					"Сохраняем ID случайного фильма": true
+				}
+			]
+		},
+		{
+			"id": "a917efef-340f-46ab-a3ff-473bb94ff66f",
+			"name": "Награды тайтла",
+			"url": "https://api.poiskkino.dev/v1.4/movie/awards?movieId=483371&limit=10",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a57c6679-977f-49e4-ae63-2c02eae521f4",
+			"name": "Поиск по названию на русском языке",
+			"url": "https://api.poiskkino.dev/v1.4/movie/search?page=1&limit=10&query=библиотекари",
+			"time": 117,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Ответ содержит информацию о сериале 'Библиотекари'": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Ответ содержит информацию о сериале 'Библиотекари'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				117
+			],
+			"allTests": [
+				{
+					"Ответ содержит информацию о сериале 'Библиотекари'": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3117f747-f601-4ef4-bb9f-17f7801a0db2",
+			"name": "Поиск случайного фильма",
+			"url": "https://api.poiskkino.dev/v1.4/movie/random",
+			"time": 658,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Ответ содержит информацию о случайном фильме": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ содержит информацию о случайном фильме": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				658
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Ответ содержит информацию о случайном фильме": true
+				}
+			]
+		},
+		{
+			"id": "bca290a5-ec83-4f67-938e-4e373dd9b2c0",
+			"name": "Поиск с другим методом",
+			"url": "https://api.poiskkino.dev/v1.4/movie/random",
+			"time": 95,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус код ошибки": true,
+				"Ответ не пустой": true
+			},
+			"testPassFailCounts": {
+				"Статус код ошибки": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ не пустой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Статус код ошибки": true,
+					"Ответ не пустой": true
+				}
+			]
+		},
+		{
+			"id": "fdae27a7-9848-42fb-b640-1a3b15174f51",
+			"name": "Отрицательный ID фильма",
+			"url": "https://api.poiskkino.dev/v1.4/movie/search?page=-5918621",
+			"time": 81,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус код ошибки": true,
+				"Ответ не пустой": true
+			},
+			"testPassFailCounts": {
+				"Статус код ошибки": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ не пустой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Статус код ошибки": true,
+					"Ответ не пустой": true
+				}
+			]
+		},
+		{
+			"id": "29e4b60a-e670-44fa-9302-498c0d1d8d6f",
+			"name": "Не указан токен",
+			"url": "https://api.poiskkino.dev/v1.4/movie/random",
+			"time": 94,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус код ошибки": true,
+				"Ответ не пустой": true
+			},
+			"testPassFailCounts": {
+				"Статус код ошибки": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ не пустой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				94
+			],
+			"allTests": [
+				{
+					"Статус код ошибки": true,
+					"Ответ не пустой": true
+				}
+			]
+		},
+		{
+			"id": "fb2b82ba-dd87-4c8d-b52a-5021ae564190",
+			"name": "Неправильный токен. Поиск",
+			"url": "https://api.poiskkino.dev/v1.4/movie/random",
+			"time": 76,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус код ошибки": true,
+				"Ответ не пустой": true
+			},
+			"testPassFailCounts": {
+				"Статус код ошибки": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ не пустой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Статус код ошибки": true,
+					"Ответ не пустой": true
+				}
+			]
+		},
+		{
+			"id": "4838b657-7a13-4525-ab21-70b354d82992",
+			"name": "Ошибка в названии тайтла. Ошибка исправлена сайтом.",
+			"url": "https://api.poiskkino.dev/v1.4/movie/search?page=1&limit=10&query=бибиотекари",
+			"time": 134,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Ответ содержит информацию о сериале 'Библиотекари'": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Ответ содержит информацию о сериале 'Библиотекари'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				134
+			],
+			"allTests": [
+				{
+					"Ответ содержит информацию о сериале 'Библиотекари'": true,
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1950,
+	"collection": {
+		"requests": [
+			{
+				"id": "dc53ca0c-46e9-47a2-8922-198de4df0e93",
+				"method": "GET"
+			},
+			{
+				"id": "a917efef-340f-46ab-a3ff-473bb94ff66f",
+				"method": "GET"
+			},
+			{
+				"id": "a57c6679-977f-49e4-ae63-2c02eae521f4",
+				"method": "GET"
+			},
+			{
+				"id": "3117f747-f601-4ef4-bb9f-17f7801a0db2",
+				"method": "GET"
+			},
+			{
+				"id": "bca290a5-ec83-4f67-938e-4e373dd9b2c0",
+				"method": "POST"
+			},
+			{
+				"id": "fdae27a7-9848-42fb-b640-1a3b15174f51",
+				"method": "GET"
+			},
+			{
+				"id": "29e4b60a-e670-44fa-9302-498c0d1d8d6f",
+				"method": "GET"
+			},
+			{
+				"id": "fb2b82ba-dd87-4c8d-b52a-5021ae564190",
+				"method": "GET"
+			},
+			{
+				"id": "4838b657-7a13-4525-ab21-70b354d82992",
+				"method": "GET"
+			}
+		]
+	}
+}
