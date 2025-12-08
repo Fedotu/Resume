@@ -27,7 +27,11 @@
 
 **Тестируемая система:** Веб-сайт [Skyeng](https://skyeng.ru/)
 
-**Виды тестирования проведенные в проекте**
+**Подробнее читайте в**:[Skyeng]
+(https://drive.google.com/drive/folders/1jkswkdnuCSg2wKbakv0Y_vxG2syEam_R?usp=sharing)
+
+
+
 
 
 
